@@ -1,0 +1,21 @@
+{
+  "name": "pokemongo",
+  "version": "1.0.0",
+  "description": "Coding Challenge: Build an End-to-End Pokémon Go ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsan8/PokemonGo.git"
+  },
+  "author": "Hassen Dhaouadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsan8/PokemonGo/issues"
+  },
+  "homepage": "https://github.com/hsan8/PokemonGo#readme"
+}
