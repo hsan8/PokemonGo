@@ -17,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/hsan8/PokemonGo/issues"
   },
-  "homepage": "https://github.com/hsan8/PokemonGo#readme"
+  "homepage": "https://github.com/hsan8/PokemonGo#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.5.0",
+    "nodemon": "^3.0.1",
+    "winston": "^3.10.0"
+  }
 }
