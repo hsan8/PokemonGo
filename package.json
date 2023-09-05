@@ -1,0 +1,43 @@
+{
+  "name": "pokemongo",
+  "version": "1.0.0",
+  "description": "Coding Challenge: Build an End-to-End Pokémon Go ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "eslint app.js --ext .json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsan8/PokemonGo.git"
+  },
+  "author": "Hassen Dhaouadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsan8/PokemonGo/issues"
+  },
+  "homepage": "https://github.com/hsan8/PokemonGo#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.0.0",
+    "http": "^0.0.1-security",
+    "lint": "^1.1.2",
+    "mongoose": "^7.5.0",
+    "nodemon": "^3.0.1",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  }
+}
