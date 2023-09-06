@@ -2,17 +2,26 @@ module.exports = {
   root: true,
   env: {
     node: true,
-    es2021: true,
+    es2021: true
   },
-  extends: ['airbnb', 'prettier', 'plugin:node/recommended'],
-  plugins: ['prettier'],
+  extends: ['airbnb/base', 'plugin:node/recommended'],
   rules: {
-    'prettier/prettier': 'error',
     'no-unused-vars': 'warn',
     'no-console': 'off',
+    'no-new': 0,
     'func-names': 'off',
     'no-process-exit': 'off',
     'object-shorthand': 'off',
     'class-methods-use-this': 'off',
-  },
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'never',
+        objects: 'never',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never'
+      }
+    ]
+  }
 };
