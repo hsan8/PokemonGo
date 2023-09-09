@@ -41,6 +41,15 @@ async function getPokemonById(pokemonId) {
     throw new ErrorException(error);
   }
 }
+async function bulkPokemonInsert(arrayOfPokemon) {
+  return Pokemon.insertMany(arrayOfPokemon).catch((error) => {
+    throw new ErrorException(error);
+  });
+}
 
-// Export the functions to use them in other parts of your application
-module.exports = { updatePokemonById, deletePokemonById, getPokemonById };
+module.exports = {
+  updatePokemonById,
+  deletePokemonById,
+  getPokemonById,
+  bulkPokemonInsert
+};
