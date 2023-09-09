@@ -16,6 +16,7 @@
 | express            | ^4.18.2         | fast, minimalist web framework for Node.js.                                                                                                        |
 | express-validator  | ^7.0.1          | an express middleware that validates a request and returns a response with errors; if any of the configured validation rules fail.                 |
 | fs                 | ^0.0.1-security | to work around the files and directories to carry out different tasks, such as a store, access, read, write, rename, and others                    |
+| path               | ^0.12.7         | The node:path module provides utilities for working with file and directory paths.                                                                 |
 | event-stream       | ^4.0.1          | package can allow me to read from massive excel file by chinks                                                                                     |
 | helmet             | ^7.0.0          | it acts as a middleware for Express and similar technologies, automatically adding or removing HTTP headers to comply with web security standards. |
 | http               | ^0.0.1-security | collects several modules for working with the HyperText Transfer Protocol: http                                                                    |
