@@ -3,19 +3,28 @@ const { ErrorInvalidRequest } = require('../errorsHandler/ErrorInvalidRequest');
 const { ErrorTranslated } = require('../errorsHandler/errorTranslated');
 const { writeLogs } = require('../utility/loggers');
 
-const errorHandlerMiddleware = (err, req, res) => {
+const errorHandlerMiddleware = (err, req, res, next) => {
   const statusCode = err.statusCode ? err.statusCode : 500;
-  writeLogs(req, err);
-  if (err instanceof ErrorException) {
-    return res.status(statusCode).json({ status: 'failed', message: err.message, data: null });
-  }
   if (err instanceof ErrorInvalidRequest) {
-    return res.status(200).json({ response: 'error', message: err.message });
+    writeLogs(req, err);
+    return res
+      .status(statusCode)
+      .json({ response: 'error', message: err.message, errorsMsg: err.errorsMsg || [] });
   }
   if (err instanceof ErrorTranslated) {
+    writeLogs(req, err);
     return res.status(200).json({ response: err.response, errMessage: err.errMessage });
   }
-  return res.status(statusCode).json({ status: 'failed', message: 'something went wrong', data: null });
+  if (err instanceof ErrorException) {
+    writeLogs(req, err);
+    return res
+      .status(statusCode)
+      .json({ status: 'failed', message: err.message, data: null });
+  }
+  writeLogs(req, err);
+  return res
+    .status(statusCode)
+    .json({ status: 'failed', message: 'something went wrong', data: null });
 };
 
-module.exports = { errorHandlerMiddleware };
+module.exports = errorHandlerMiddleware;
