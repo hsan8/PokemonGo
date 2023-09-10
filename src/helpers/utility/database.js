@@ -18,5 +18,5 @@ mongoose
     console.log(e);
   });
 
-const conn = mongoose.connection;
+const conn = mongoose;
 module.exports = conn;

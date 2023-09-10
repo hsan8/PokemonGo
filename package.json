@@ -2,12 +2,12 @@
   "name": "pokemon_go",
   "version": "1.0.0",
   "description": "Coding Challenge: Build an End-to-End Pokémon Go ",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^5.0.0"
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.4",
+    "supertest": "^6.3.3"
   }
 }

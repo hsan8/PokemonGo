@@ -1,12 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const http = require('http');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const { errorHandlerMiddleware } = require('./src/helpers/middleware/errorHandler.middleware');
-const { ErrorException } = require('./src/helpers/errorsHandler/ErrorException');
 const routes = require('./src/helpers/routes');
+const errorHandlerMiddleware = require('./src/helpers/middleware/errorHandler.middleware');
 
 const app = express();
 dotenv.config();
@@ -40,23 +38,6 @@ require('./src/helpers/constant');
 require('./src/helpers/utility');
 
 // APIs start point
-app.use('/api', routes);
+app.use('/api', routes, errorHandlerMiddleware);
 
-const server = http.createServer(app);
-
-// Set the server timeout based on an environment variable
-server.timeout = Number(process.env.POKEMON_GO_API_TIMEOUT);
-
-// Use the custom error handler middleware
-app.use(errorHandlerMiddleware);
-
-// Start the server on the specified port and log the port
-server.listen(global.port, () => {
-  console.log('Server running on', global.port);
-});
-
-// Add an event listener for uncaught exceptions and pass them to the custom error handler
-process.on('uncaughtException', (err) => {
-  console.error('Uncaught exception:', err);
-  new ErrorException(err);
-});
+module.exports = app;
