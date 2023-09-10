@@ -6,7 +6,7 @@ const logger = winston.createLogger({
   defaultMeta: { service: 'user-service' },
   transports: [new winston.transports.File({ filename: 'error.log', level: 'error' })]
 });
-if (process.env.POKEMON_GO_ENVIRONNEMENT === 'production') {
+if (process.env.POKEMON_GO_ENVIRONNEMENT === 'PROD') {
   logger.add(
     new winston.transports.Console({
       format: winston.format.simple()
