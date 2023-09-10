@@ -91,8 +91,9 @@ async function convertXlsxToCsv(inputFilePath, outputFilePath) {
       const rowData = [];
       // Iterate through cells in the row
       row.eachCell({ includeEmpty: true }, (cell, i) => {
-        // eslint-disable-next-line no-unused-expressions
-        i && rowData.push(cell.value !== null && cell.value !== undefined ? cell.value : '');
+        // eslint-disable-next-line no-unused-expressions, operator-linebreak
+        i &&
+          rowData.push(cell.value !== null && cell.value !== undefined ? cell.value : '');
       });
       // Join the row data with commas to create a CSV line
       const csvLine = rowData.join(',');
