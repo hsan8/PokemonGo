@@ -19,18 +19,7 @@ const getByIdRoute = `${baseRoute}/getByID`;
 const deleteByIdRoute = `${baseRoute}/deleteByID`;
 const listAllPokemonRoute = `${baseRoute}/listAllPokemon`;
 
-const mongodbConnectionUri = `mongodb+srv://${process.env.POKEMON_GO_MONGO_USER_NAME}:${process.env.POKEMON_GO_MONGO_PASSWORD}@${process.env.POKEMON_GO_MONGO_URI}?retryWrites=true&w=majority`;
-
 let pokemonId;
-
-beforeEach(async () => {
-  await mongoose.connect(mongodbConnectionUri);
-});
-
-/* Closing database connection after each test. */
-afterEach(async () => {
-  await mongoose.connection.close();
-});
 
 describe(`POST ${createRoute}`, () => {
   test('should create a pokemon', async () => {
