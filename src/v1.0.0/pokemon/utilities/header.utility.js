@@ -27,4 +27,37 @@ function adjustHeadersKeys(inputArray = []) {
 
   return transformedArray;
 }
-module.exports = { adjustHeadersKeys };
+
+const objectKeys = [
+  'Row',
+  'Name',
+  'PokedexNumber',
+  'ImgName',
+  'Generation',
+  'EvolutionStage',
+  'Evolved',
+  'FamilyID',
+  'CrossGen',
+  'Type1',
+  'Type2',
+  'Weather1',
+  'Weather2',
+  'STAT_TOTAL',
+  'ATK',
+  'DEF',
+  'STA',
+  'Legendary',
+  'Aquireable',
+  'Spawns',
+  'Regional',
+  'Raidable',
+  'Hatchable',
+  'Shiny',
+  'Nest',
+  'New',
+  'NotGettable',
+  'FutureEvolve',
+  'CP100_40',
+  'CP100_39'
+];
+module.exports = { adjustHeadersKeys, objectKeys };
