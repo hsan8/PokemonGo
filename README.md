@@ -83,6 +83,8 @@ https://docs.docker.com/compose/install/linux/
 ### Run The Project
 
 ```
+git clone https://github.com/hsan8/PokemonGo.git
+cd PokemonGo
 sudo docker-compose build
 sudo docker-compose up
 ```
