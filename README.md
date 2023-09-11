@@ -35,18 +35,34 @@
 | eslint-config-prettier    | ^9.0.0  | turns off all rules that are unnecessary or might conflict with Prettier.                                                                                                                                                                              |
 | eslint-plugin-import      | ^2.25.2 | This plugin intends to support linting of ES2015+ (ES6+) import/export syntax, and prevent issues with misspelling of file paths and import names. All the goodness that the ES2015+ static module syntax intends to provide, marked up in the editor. |
 | eslint-plugin-prettier    | ^5.0.0  | a tool that integrates ESLint and Prettier, two popular tools used in JavaScript development.                                                                                                                                                          |
+| jest                      | ^29.6.4 | Jest is a delightful JavaScript Testing Framework                                                                                                                                                                                                      |
+| supertest                 | ^6.3.3  | provide a high-level abstraction for testing HTTP, while still allowing you to drop down to the lower-level API provided by superagent.                                                                                                                |
 
 ### Project Tree
 
 ```
 📦 POKEMON_GO
+├─ public/
 ├─ src/
 │  └─ 1 helpers
 │     ├─ 1.1 errorsHandler
 │     ├─ 1.2 constant
 │     ├─ 1.3 middleware
 │     └─ 1.4 utility
+│  └─ 2 v1.0.0
+│     └─ 1 pokemon
+│        ├─ 2.1.1 controller
+│        ├─ 2.1.2 middleware
+│        ├─ 2.1.3 model
+│        ├─ 2.1.4 routes
+│        ├─ 2.1.5 services
+│        ├─ 2.1.6 test
+│        └─ 2.1.7 utilities
 ├─ app.js
+├─ server.js
+├─ docker-compose-app.yml
+├─ Dockerfile
+├─ README.md
 ├─ .eslintrc.js
 ├─ .gitignore
 ├─ package-lock.json
