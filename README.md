@@ -80,7 +80,12 @@ https://docs.docker.com/engine/install/ubuntu/
 please refer to this link:
 https://docs.docker.com/compose/install/linux/
 ```
+### Run The Project
 
+```
+sudo docker-compose build
+sudo docker-compose up
+```
 ### My system configuration:
 
 ```
