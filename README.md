@@ -85,8 +85,11 @@ https://docs.docker.com/compose/install/linux/
 ```
 git clone https://github.com/hsan8/PokemonGo.git
 cd PokemonGo
-sudo docker-compose build
 sudo docker-compose up
+```
+to test the project 
+```
+npm run test
 ```
 ### My system configuration:
 
