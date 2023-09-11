@@ -2,12 +2,13 @@
 # KIB
 
 
-1. [seed from excel](#4-seed-from-excel)
-1. [Create new pokemon](#3-create-new-pokemon)
-1. [Update Pokemon by ID](#2-update-pokemon-by-id)
-1. [Get single pokemon by ID](#5-get-single-pokemon-by-id)
-1. [List All Pokemon](#6-list-all-pokemon)
-1. [Delete Pokemon by Object ID](#1-delete-pokemon-by-object-id)
+1. [Server alive test](#1-server-alive-test)
+1. [seed from excel](#5-seed-from-excel)
+1. [Create new pokemon](#4-create-new-pokemon)
+1. [Update Pokemon by ID](#3-update-pokemon-by-id)
+1. [Get single pokemon by ID](#6-get-single-pokemon-by-id)
+1. [List All Pokemon](#7-list-all-pokemon)
+1. [Delete Pokemon by Object ID](#2-delete-pokemon-by-object-id)
 
 
 
@@ -18,7 +19,21 @@
 
 
 
-### 1. Delete Pokemon by Object ID
+### 1. Server alive test
+
+
+API to **check the server is a live**
+
+
+***Endpoint:***
+
+```bash
+Method: DELETE
+Type: RAW
+URL: localhost:8080
+```
+
+### 2. Delete Pokemon by Object ID
 
 
 API to **delete a specific pokemon** by it's own object ID
@@ -32,9 +47,7 @@ Type: RAW
 URL: localhost:8080/api/v1.0.0/pokemon/deleteByID/64fcbac067329d75542ece3c
 ```
 
-
-
-### 2. Update Pokemon by ID
+### 3. Update Pokemon by ID
 
 
 API to **update a specific pokeon** by ID
@@ -93,7 +106,7 @@ URL: localhost:8080/api/v1.0.0/pokemon/update/64fc69ef95d0bce9c33f8237
 
 
 
-### 3. Create new pokemon
+### 4. Create new pokemon
 
 
 API to **save new pokemon** in database
@@ -152,7 +165,7 @@ URL: localhost:8080/api/v1.0.0/pokemon/create
 
 
 
-### 4. seed from excel
+### 5. seed from excel
 
 
 It's an API to **read from the excel sheet** and save to database
@@ -170,7 +183,7 @@ URL: localhost:8080/api/v1.0.0/pokemon/seed
 
 
 
-### 5. Get single pokemon by ID
+### 6. Get single pokemon by ID
 
 
 api to get specific **pokemon** by mongo object ID
@@ -186,7 +199,7 @@ URL: localhost:8080/api/v1.0.0/pokemon/getByID/64fcc02b1b1a492b48c1bdc7
 
 
 
-### 6. List All Pokemon
+### 7. List All Pokemon
 
 
 Api to list all pokemon with pagination and search or/and sorting:
