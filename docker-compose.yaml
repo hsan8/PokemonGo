@@ -1,7 +1,16 @@
 version: '3'
-
 services:
-  node_app:
-    image: app
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - '8080:8080'
+      - "8080:8080"
+    environment:
+      POKEMON_GO_SERVER_PORT: 8080
+      POKEMON_GO_ENVIRONMENT: PROD
+      POKEMON_GO_API_TIMEOUT: 10000
+      POKEMON_GO_FRONT_END_BASE_URL: localhost
+      POKEMON_GO_MONGO_USER_NAME: user
+      POKEMON_GO_MONGO_PASSWORD: password2022
+      POKEMON_GO_MONGO_URI: cluster0.poohc.mongodb.net/POKEMON_GO
