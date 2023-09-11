@@ -28,8 +28,6 @@ API to **check the server is a live**
 ***Endpoint:***
 
 ```bash
-Method: DELETE
-Type: RAW
 URL: localhost:8080
 ```
 
