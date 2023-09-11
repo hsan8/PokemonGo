@@ -1,8 +1,15 @@
-FROM node:18
-WORKDIR /usr/src/v1.00/
-RUN mkdir /usr/src/app
+FROM node:latest
+
+# Set working directory
 WORKDIR /app
-COPY package.json .
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy remaining files
 COPY . .
 
 # Expose port 8080 for incoming traffic
@@ -21,5 +28,6 @@ ENV POKEMON_GO_FRONT_END_BASE_URL=localhost
 ENV POKEMON_GO_MONGO_USER_NAME=user
 ENV POKEMON_GO_MONGO_PASSWORD=password2022
 ENV POKEMON_GO_MONGO_URI=cluster0.poohc.mongodb.net/POKEMON_GO
+
 # Start Node.js app
 CMD ["npm", "start"]
